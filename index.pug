@@ -1,0 +1,31 @@
+doctype
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title Automoblox
+    link(href="css/bootstrap.min.css" rel="stylesheet")
+    link(href="css/main.css" rel="stylesheet")
+    link(href='favicon.png', rel='icon')
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  body
+
+    nav.navbar.navbar-expand-lg.navbar-light.bg-white
+      a.navbar-brand(href="#") Automoblox
+      button.navbar-toggler(data-toggle="collapse" data-target="#navbar"): span.navbar-toggler-icon
+
+      .collapse.navbar-collapse#navbar
+        ul.navbar-nav.mr-auto
+          li.nav-item.active: a.nav-link(href="#") Overview
+          li.nav-item: a.nav-link(href="a9.html") A9 Compact
+          li.nav-item: a.nav-link(href="c9r.html") C9-R Sportscar
+          li.nav-item: a.nav-link(href="m9.html") M9 Sportvan
+          li.nav-item: a.nav-link(href="t9.html") T9 Pickup
+          li.nav-item: a.nav-link(href="x9.html") X9 SUV
+        ul.navbar-nav.mr-0
+          li.nav-item: a.btn.btn-primary(href="#buynow") Buy Now
+    
+    footer
+    
+    script(src="js/jquery.min.js")
+    script(src="js/popper.min.js")
+    script(src="js/bootstrap.min.js")
