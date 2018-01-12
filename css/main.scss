@@ -227,6 +227,84 @@ main {
   }
 }
 
+section.index {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr 2fr;
+  grid-template-areas:
+    "a a a . . one"
+    "a a a . two three"
+    "a a a four five six";
+  
+  @media screen and (max-width: 648px) {
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-template-areas:
+      "one one two two three three"
+      "a a a a a a"
+      "four four five five six six";
+    font-size: 12px;
+  }
+  
+  article {
+    grid-area: a;
+    align-self: center;
+    padding: 2em;
+
+    h1 {
+      font-size: 4em;
+      line-height: 1.1;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      margin: 1em 0;
+    }
+  }
+  
+  figure {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    background-blend-mode: multiply;
+  }
+
+  .one {
+    grid-area: one;
+    background-image: url(../images/a9_large.jpg);
+    background-color: rgb(224, 147, 32);
+  }
+
+  .two {
+    grid-area: two;
+    background-image: url(../images/c9_large.jpg);
+    background-color: rgb(243, 63, 63);
+  }
+  .three {
+    grid-area: three;
+    background-image: url(../images/m9_large.jpg);
+    background-color: rgb(43, 220, 243);
+  }
+  .four {
+    grid-area: four;
+    background-image: url(../images/t9_large.jpg);
+    background-color: rgb(31, 197, 73);
+  }
+  .five {
+    grid-area: five;
+    background-image: url(../images/x9_large.jpg);
+    background-color: rgb(179, 22, 171);
+  }
+  .six {
+    grid-area: six;
+    background-image: url(../images/s9_large.jpg);
+    background-color: rgb(64, 26, 236);
+  }
+
+}
+
 footer {
   background-color: rgb(244, 245, 247);
   -webkit-font-smoothing: antialiased;

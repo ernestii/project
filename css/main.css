@@ -160,6 +160,59 @@ main {
     .similar figure:hover {
       background: #f4f5f7; }
 
+section.index {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 2fr 2fr 2fr;
+  grid-template-areas: "a a a . . one" "a a a . two three" "a a a four five six"; }
+  @media screen and (max-width: 648px) {
+    section.index {
+      grid-template-rows: 1fr 3fr 1fr;
+      grid-template-areas: "one one two two three three" "a a a a a a" "four four five five six six";
+      font-size: 12px; } }
+  section.index article {
+    grid-area: a;
+    align-self: center;
+    padding: 2em; }
+    section.index article h1 {
+      font-size: 4em;
+      line-height: 1.1; }
+    section.index article p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      margin: 1em 0; }
+  section.index figure {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    background-blend-mode: multiply; }
+  section.index .one {
+    grid-area: one;
+    background-image: url(../images/a9_large.jpg);
+    background-color: #e09320; }
+  section.index .two {
+    grid-area: two;
+    background-image: url(../images/c9_large.jpg);
+    background-color: #f33f3f; }
+  section.index .three {
+    grid-area: three;
+    background-image: url(../images/m9_large.jpg);
+    background-color: #2bdcf3; }
+  section.index .four {
+    grid-area: four;
+    background-image: url(../images/t9_large.jpg);
+    background-color: #1fc549; }
+  section.index .five {
+    grid-area: five;
+    background-image: url(../images/x9_large.jpg);
+    background-color: #b316ab; }
+  section.index .six {
+    grid-area: six;
+    background-image: url(../images/s9_large.jpg);
+    background-color: #401aec; }
+
 footer {
   background-color: #f4f5f7;
   -webkit-font-smoothing: antialiased;
