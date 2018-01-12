@@ -51,45 +51,56 @@
       </nav>
       <div class="container">
         <main>
-          <div class="gallery"><img src="images/m9_large.jpg" alt=""></div>
+          <figure><img src="images/m9_large.jpg" alt="Automoblox® M9 Sportvan"></figure>
           <article>
-            <h2>Automoblox® M9 Sportvan</h2>
-            <div class="description">The 2016 Automoblox® M9 comfortably seats eight of our new people. The extra-long main passenger compartment and additional seating for four in the rear block give this vehicle the longest wheelbase in the line-up. Large Brembo® brakes with cross-drilled rotors, will enable your child to build a minivan that even dads won’t be able to resist.</div>
-            <div class="buynow">
+            <header>
+              <h2>Automoblox® M9 Sportvan</h2>
+            </header>
+            <p>The 2016 Automoblox® M9 comfortably seats eight of our new people. The extra-long main passenger compartment and additional seating for four in the rear block give this vehicle the longest wheelbase in the line-up. Large Brembo® brakes with cross-drilled rotors, will enable your child to build a minivan that even dads won’t be able to resist.</p>
+          </article>
+          <aside>
+            <section class="buynow">
               <form class="row justify-content-start" action="shop.php" method="POST">
                 <label class="price col-2"><small>$</small>9.99</label>
-                <label class="in-stock col-4 col-form-label"><img src="images/icons/instock.svg">In Stock</label>
+                <label class="in-stock col-4 col-form-label"><img src="images/icons/instock.svg" alt="In Stock">In Stock</label>
                 <div class="col-6">
                   <input class="btn btn-danger" id="addtocart" type="submit" value="Add to Cart" data-title="M9 Sportvan" data-price="$9.99" data-photo="images/m9_large.jpg">
                 </div>
               </form>
-            </div>
-            <div class="facts row">
-              <div class="col"><img src="images/icons/age.svg" alt="Age">
-                <p>Ages 3 & Up</p>
-              </div>
-              <div class="col"><img src="images/icons/content.svg" alt="Contents">
-                <p>13 Mix-and-Match Components</p>
-              </div>
-              <div class="col"><img src="images/icons/moneyback.svg" alt="Moneyback">
-                <p>30 Day Moneyback</p>
-              </div>
-              <div class="col"><img src="images/icons/delivery.svg" alt="Free Delivery">
-                <p>Free Delivery</p>
-              </div>
-            </div>
-          </article>
+            </section>
+            <section class="facts row">
+              <figure class="col"><img src="images/icons/age.svg" alt="Age">
+                <figcaption>Ages 3 & Up</figcaption>
+              </figure>
+              <figure class="col"><img src="images/icons/content.svg" alt="Contents">
+                <figcaption>13 Mix-and-Match Components</figcaption>
+              </figure>
+              <figure class="col"><img src="images/icons/moneyback.svg" alt="Moneyback">
+                <figcaption>30 Day Moneyback</figcaption>
+              </figure>
+              <figure class="col"><img src="images/icons/delivery.svg" alt="Free Delivery">
+                <figcaption>Free Delivery</figcaption>
+              </figure>
+            </section>
+          </aside>
         </main>
       </div>
-      <div class="similar container-fluid">
+      <aside class="similar container-fluid">
         <h3>Guests who bought this also bought</h3>
-        <div class="row">
-          <div class="col-sm-6 col-md-3"><a class="item" href="a9.html"><img src="images/a9_large.jpg" alt=""><br>A9 Compact</a></div>
-          <div class="col-sm-6 col-md-3"><a class="item" href="c9r.html"><img src="images/c9r_large.jpg" alt=""><br>C9-R Sportscar</a></div>
-          <div class="col-sm-6 col-md-3"><a class="item" href="t9.html"><img src="images/t9_large.jpg" alt=""><br>T9 Pickup</a></div>
-          <div class="col-sm-6 col-md-3"><a class="item" href="x9.html"><img src="images/x9_large.jpg" alt=""><br>X9 SUV</a></div>
-        </div>
-      </div>
+        <nav class="row"><a class="col-sm-6 col-md-3" href="a9.html">
+            <figure><img src="images/a9_large.jpg" alt="A9 Compact">
+              <figcaption>A9 Compact</figcaption>
+            </figure></a><a class="col-sm-6 col-md-3" href="t9.html">
+            <figure><img src="images/t9_large.jpg" alt="M9 Sportvan">
+              <figcaption>T9 Pickup</figcaption>
+            </figure></a><a class="col-sm-6 col-md-3" href="c9r.html">
+            <figure><img src="images/c9r_large.jpg" alt="CX-R Sportscar">
+              <figcaption>C9-R Sportscar</figcaption>
+            </figure></a><a class="col-sm-6 col-md-3" href="x9.html">
+            <figure><img src="images/x9_large.jpg" alt="X9 SUV">
+              <figcaption>X9 SUV</figcaption>
+            </figure></a></nav>
+      </aside>
       <footer>Designed by Ernest Iliiasov #200336022 for<br> COMP2081 Advanced Web Interface Design @ Georgian College</footer>
     </div>
     <script src="js/jquery.min.js"></script>

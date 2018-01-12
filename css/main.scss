@@ -116,38 +116,34 @@ main {
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   grid-template-areas:
-    "g g g a a a";
+    "g g g a a a"
+    "g g g b b b";
   
   @media screen and (max-width: 768px) {
     grid-template-areas:
       "g g g g g g"
-      "a a a a a a";
+      "a a a a a a"
+      "b b b b b b";
   }
   
   article {
     grid-area: a;
+    margin-bottom: 2em;
 
     h2 {
       font-size: 2.4em;
+      margin-bottom: .5em;
     }
     
-    .description {
-      margin: .5em 0 2em 0;
+    p {
       line-height: 1.6;
       font-size: 1.2em;
     }
-    .facts {
-      margin-top: 30px;
-      font-size: .8em;
-      text-align: center;
-      img {
-        width: 32px;
-        margin-bottom: 5px;
-      }
-      p {
-        color: #666;
-      }
-    }
+    
+  }
+
+  aside {
+    grid-area: b;
 
     .buynow {
       background: rgb(244, 245, 247);
@@ -166,8 +162,23 @@ main {
         width: 100%;
       }
     }
+
+    .facts {
+      margin-top: 30px;
+      font-size: .8em;
+      text-align: center;
+
+      img {
+        width: 32px;
+      }
+      figcaption {
+        color: #666;
+        margin-top: 5px;
+      }
+    }
   }
-  .gallery {
+
+  figure {
     grid-area: g;
     img {
       max-width: 100%;
@@ -188,8 +199,15 @@ main {
     color: #666;
   }
 
-  .item {
+  a {
     display: block;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  figure {
+    color: #000;
     background: rgba(246, 247, 248, 0.8);
     padding: 20px 20px;
     border-radius: 4px;
@@ -203,11 +221,8 @@ main {
       margin-bottom: .8em;
     }
 
-    color: #000;
-
     &:hover {
       background: rgb(244, 245, 247);
-      text-decoration: none;
     }
   }
 }

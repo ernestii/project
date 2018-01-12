@@ -87,45 +87,48 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "g g g a a a"; }
+  grid-template-areas: "g g g a a a" "g g g b b b"; }
   @media screen and (max-width: 768px) {
     main {
-      grid-template-areas: "g g g g g g" "a a a a a a"; } }
+      grid-template-areas: "g g g g g g" "a a a a a a" "b b b b b b"; } }
   main article {
-    grid-area: a; }
+    grid-area: a;
+    margin-bottom: 2em; }
     main article h2 {
-      font-size: 2.4em; }
-    main article .description {
-      margin: .5em 0 2em 0;
+      font-size: 2.4em;
+      margin-bottom: .5em; }
+    main article p {
       line-height: 1.6;
       font-size: 1.2em; }
-    main article .facts {
-      margin-top: 30px;
-      font-size: .8em;
-      text-align: center; }
-      main article .facts img {
-        width: 32px;
-        margin-bottom: 5px; }
-      main article .facts p {
-        color: #666; }
-    main article .buynow {
+  main aside {
+    grid-area: b; }
+    main aside .buynow {
       background: #f4f5f7;
       padding: 20px 30px;
       border-radius: 4px; }
-      main article .buynow .price {
+      main aside .buynow .price {
         font-size: 1.5em;
         font-weight: 600;
         margin: 0; }
-      main article .buynow .in-stock {
+      main aside .buynow .in-stock {
         color: #34c317; }
-        main article .buynow .in-stock img {
+        main aside .buynow .in-stock img {
           width: 25px;
           vertical-align: middle; }
-      main article .buynow #addtocart {
+      main aside .buynow #addtocart {
         width: 100%; }
-  main .gallery {
+    main aside .facts {
+      margin-top: 30px;
+      font-size: .8em;
+      text-align: center; }
+      main aside .facts img {
+        width: 32px; }
+      main aside .facts figcaption {
+        color: #666;
+        margin-top: 5px; }
+  main figure {
     grid-area: g; }
-    main .gallery img {
+    main figure img {
       max-width: 100%; }
 
 .similar {
@@ -138,22 +141,24 @@ main {
     text-transform: uppercase;
     font-weight: 400;
     color: #666; }
-  .similar .item {
-    display: block;
+  .similar a {
+    display: block; }
+    .similar a:hover {
+      text-decoration: none; }
+  .similar figure {
+    color: #000;
     background: rgba(246, 247, 248, 0.8);
     padding: 20px 20px;
     border-radius: 4px;
     text-align: center;
     transition: all ease 0.3s;
-    margin: .5em 0;
-    color: #000; }
-    .similar .item img {
+    margin: .5em 0; }
+    .similar figure img {
       max-width: 150px;
       mix-blend-mode: darken;
       margin-bottom: .8em; }
-    .similar .item:hover {
-      background: #f4f5f7;
-      text-decoration: none; }
+    .similar figure:hover {
+      background: #f4f5f7; }
 
 footer {
   background-color: #f4f5f7;

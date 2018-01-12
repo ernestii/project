@@ -44,60 +44,54 @@ html(lang="en")
             li.nav-item.active: a.nav-link(href="t9.html") T9 Pickup
             li.nav-item: a.nav-link(href="x9.html") X9 SUV
       .container: main
-        .gallery
-          img(src="images/t9_large.jpg" alt="")
+        figure
+          img(src="images/t9_large.jpg" alt="T9 Pickup")
         article
-          h2 Automoblox® T9 Pickup
-          .description Pick-ups can take you to rugged and daring places no ordinary vehicle can. The Automoblox® T9 will have your child dreaming of fun adventures and carefree cruising. The fun of taking apart the T9 and rebuilding four-wheeled creations will take your child to places beyond their imagination.
+          header
+            h2 Automoblox® T9 Pickup
+          p Pick-ups can take you to rugged and daring places no ordinary vehicle can. The Automoblox® T9 will have your child dreaming of fun adventures and carefree cruising. The fun of taking apart the T9 and rebuilding four-wheeled creations will take your child to places beyond their imagination.
+          
+        aside
           .buynow
             form(action="shop.php" method="POST").row.justify-content-start
               label.price.col-2 <small>$</small>9.99
               label.in-stock.col-4.col-form-label
-                img(src="images/icons/instock.svg")
+                img(src="images/icons/instock.svg" alt="In Stock")
                 | In Stock
               .col-6
                 input#addtocart.btn.btn-danger(type="submit" value="Add to Cart" data-title="T9 Pickup" data-price="$9.99" data-photo="images/t9_large.jpg")
               
 
           .facts.row
-            .col
+            figure.col
               img(src="images/icons/age.svg" alt="Age")
-              p Ages 3 & Up
-            .col
+              figcaption Ages 3 & Up
+            figure.col
               img(src="images/icons/content.svg" alt="Contents")
-              p 13 Mix-and-Match Components
-            .col
+              figcaption 13 Mix-and-Match Components
+            figure.col
               img(src="images/icons/moneyback.svg" alt="Moneyback")
-              p 30 Day Moneyback
-            .col
+              figcaption 30 Day Moneyback
+            figure.col
               img(src="images/icons/delivery.svg" alt="Free Delivery")
-              p Free Delivery
+              figcaption Free Delivery
           
       
-      .similar.container-fluid
+      aside.similar.container-fluid
         h3 Guests who bought this also bought
-
-        .row
-          .col-sm-6.col-md-3
-            a(href="a9.html").item
-              img(src="images/a9_large.jpg" alt="")
-              br
-              | A9 Compact
-          .col-sm-6.col-md-3
-            a(href="m9.html").item
-              img(src="images/m9_large.jpg" alt="")
-              br
-              | M9 Sportvan
-          .col-sm-6.col-md-3
-            a(href="t9.html").item
-              img(src="images/c9r_large.jpg" alt="")
-              br
-              | C9-R Sportscar
-          .col-sm-6.col-md-3
-            a(href="x9.html").item
-              img(src="images/x9_large.jpg" alt="")
-              br
-              | X9 SUV
+        nav.row
+          a.col-sm-6.col-md-3(href="a9.html"): figure
+            img(src="images/a9_large.jpg" alt="A9 Compact")
+            figcaption A9 Compact
+          a(href="m9.html").col-sm-6.col-md-3: figure
+            img(src="images/m9_large.jpg" alt="M9 Sportvan")
+            figcaption M9 Sportvan
+          a(href="c9r.html").col-sm-6.col-md-3: figure
+            img(src="images/c9r_large.jpg" alt="CX-R Sportscar")
+            figcaption C9-R Sportscar
+          a(href="x9.html").col-sm-6.col-md-3: figure
+            img(src="images/x9_large.jpg" alt="X9 SUV")
+            figcaption X9 SUV
           
 
 
