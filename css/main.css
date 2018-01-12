@@ -2,54 +2,62 @@
 #__bs_notify__ {
   display: none !important; }
 
-.logo {
-  width: 80px; }
-
 html, body {
   background-color: #333; }
 
 body {
   font-family: "Cabin", sans-serif;
-  line-height: 1.5;
-  perspective: 1000px; }
-  body.cart-shown #cart {
-    visibility: visible;
-    transform: scale(1) translateX(0);
-    opacity: 1; }
-    body.cart-shown #cart .cart_item.added {
-      transform: translateX(0);
-      opacity: 1; }
-      body.cart-shown #cart .cart_item.added .title {
-        transform: translateX(0); }
-      body.cart-shown #cart .cart_item.added .price {
-        transform: translateX(0); }
-  body.cart-shown #page {
-    transform: scale(0.8) translateX(-300px) rotateY(20deg);
-    z-index: 1;
-    opacity: .4; }
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5; }
 
+/* When the shopping cart is open */
+body.cart-shown #cart {
+  visibility: visible;
+  transform: scale(1) translateX(0);
+  opacity: 1; }
+  body.cart-shown #cart .cart_item.added {
+    transform: translateX(0);
+    opacity: 1; }
+    body.cart-shown #cart .cart_item.added .title {
+      transform: translateX(0); }
+    body.cart-shown #cart .cart_item.added .price {
+      transform: translateX(0); }
+body.cart-shown #page {
+  transform: scale(0.8) translateX(-300px) rotateY(20deg);
+  z-index: 1;
+  opacity: .4; }
+
+nav .logo {
+  width: 80px; }
+
+/* Sets a 3d perspective for the #page, when it's "rotated".
+  A dedicated element is needed to keep the position: fixed for #cart */
+.perspective {
+  perspective: 1000px; }
+
+/* #page is the whole page, this element is needed for
+   the "page rotation" animation */
 #page {
   transition: all ease 0.3s;
   background-color: #fff; }
 
+/* Shopping cart */
 #cart {
-  opacity: 0;
-  transform: scale(1.2) translateX(350px);
-  width: 100%;
   position: fixed;
+  z-index: 1000;
+  opacity: 0;
+  background-color: #fff;
+  overflow-y: auto;
+  overflow-x: hidden;
   right: 0;
   top: 0;
   bottom: 0;
-  max-width: 100vh;
   width: 350px;
-  background-color: #fff;
-  z-index: 1000;
-  box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.2);
-  transition: all ease 0.3s;
+  max-width: 100vw;
   padding: 30px;
   padding-right: 0;
-  overflow-y: auto;
-  overflow-x: hidden; }
+  transform: scale(1.2) translateX(350px);
+  transition: all ease 0.3s; }
   #cart h3 {
     font-size: .8em;
     letter-spacing: 3px;
@@ -57,30 +65,32 @@ body {
     font-weight: 400;
     color: #666; }
   #cart table.table {
+    /* To align the text */
     margin-left: -.75rem; }
-  #cart .cart__inner .cart_item {
+  #cart .cart_item {
     background-size: contain;
     background-position: 270% center;
     background-repeat: no-repeat;
     padding: 2.8em 0;
     transition: all ease 0.3s;
-    transition-delay: .2s; }
-    #cart .cart__inner .cart_item .title {
+    transition-delay: .2s;
+    /* Ads an animation for the just added item 
+       when the cart is opened */ }
+    #cart .cart_item .title {
       font-weight: 800;
       font-size: 1.4em;
       line-height: 1.7;
       transition: all ease 0.3s; }
-    #cart .cart__inner .cart_item .price {
+    #cart .cart_item .price {
       opacity: .6;
       transition: all ease 0.3s;
       transition-delay: .1s; }
-    #cart .cart__inner .cart_item.added {
+    #cart .cart_item.added {
       transform: translateX(100px);
-      opacity: 0;
-      will-change: auto; }
-      #cart .cart__inner .cart_item.added .title {
+      opacity: 0; }
+      #cart .cart_item.added .title {
         transform: translateX(400px); }
-      #cart .cart__inner .cart_item.added .price {
+      #cart .cart_item.added .price {
         transform: translateX(400px); }
 
 main {
@@ -88,7 +98,11 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "g g g a a a" "g g g b b b"; }
+  /* Not a very smart use of css grids */
+  grid-template-areas: "g g g a a a" "g g g b b b";
+  /* Prodict title and description */
+  /* Add to cart and facts section */
+  /* Product image */ }
   @media screen and (max-width: 768px) {
     main {
       grid-template-areas: "g g g g g g" "a a a a a a" "b b b b b b"; } }
@@ -112,11 +126,16 @@ main {
         font-weight: 600;
         margin: 0; }
       main aside .buynow .in-stock {
-        color: #34c317; }
+        color: #34c317;
+        font-weight: 600;
+        font-size: .8em;
+        text-transform: uppercase;
+        letter-spacing: 1px; }
         main aside .buynow .in-stock img {
           width: 25px;
-          vertical-align: middle; }
-      main aside .buynow #addtocart {
+          vertical-align: middle;
+          margin-right: .3em; }
+      main aside .buynow input[type="submit"] {
         width: 100%; }
     main aside .facts {
       margin-top: 30px;
@@ -132,6 +151,7 @@ main {
     main figure img {
       max-width: 100%; }
 
+/* GUESTS WHO BOUGHT THIS ALSO BOUGHT... */
 .similar {
   margin: 50px 0; }
   .similar h3 {
@@ -146,6 +166,8 @@ main {
     display: block; }
     .similar a:hover {
       text-decoration: none; }
+      .similar a:hover figure {
+        background: #f4f5f7; }
   .similar figure {
     color: #000;
     background: rgba(246, 247, 248, 0.8);
@@ -158,15 +180,15 @@ main {
       max-width: 150px;
       mix-blend-mode: darken;
       margin-bottom: .8em; }
-    .similar figure:hover {
-      background: #f4f5f7; }
 
+/* Home page styles */
 section.index {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 2fr 2fr 2fr;
-  grid-template-areas: "a a a . . one" "a a a . two three" "a a a four five six"; }
+  grid-template-areas: "a a a . . one" "a a a . two three" "a a a four five six";
+  /* Mosaic */ }
   @media screen and (max-width: 648px) {
     section.index {
       grid-template-rows: 1fr 3fr 1fr;
@@ -214,9 +236,9 @@ section.index {
     background-image: url(../images/s9_large.jpg);
     background-color: #401aec; }
 
+/* Footer */
 footer {
   background-color: #f4f5f7;
-  -webkit-font-smoothing: antialiased;
   padding: 40px 0;
   font-size: .8em;
   color: #999;
