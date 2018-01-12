@@ -13,6 +13,7 @@ html, body {
 body {
   font-family: "Cabin", sans-serif;
   line-height: 1.5;
+  perspective: 1000px;
 
   &.cart-shown {
     #cart {
@@ -28,7 +29,7 @@ body {
       }
     }
     #page {
-      transform: scale(0.8) translateX(-300px);
+      transform: scale(0.8) translateX(-300px) rotateY(20deg);
       z-index: 1;
       opacity: .4;
     }
@@ -56,7 +57,6 @@ body {
   box-shadow: 0 0 40px 10px rgba(0,0,0,0.2);
 
   transition: all ease 0.3s;
-  //transition-delay: 0.2s;
 
   padding: 30px;
   padding-right: 0;

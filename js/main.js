@@ -24,6 +24,6 @@ $('#addtocart').click(function() {
   return false;
 });
 
-$('#page, #checkout').click(function() {
+$('#page, #checkout, body').click(function() {
   $('body').removeClass('cart-shown');
 });

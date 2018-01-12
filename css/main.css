@@ -10,7 +10,8 @@ html, body {
 
 body {
   font-family: "Cabin", sans-serif;
-  line-height: 1.5; }
+  line-height: 1.5;
+  perspective: 1000px; }
   body.cart-shown #cart {
     visibility: visible;
     transform: scale(1) translateX(0);
@@ -23,7 +24,7 @@ body {
       body.cart-shown #cart .cart_item.added .price {
         transform: translateX(0); }
   body.cart-shown #page {
-    transform: scale(0.8) translateX(-300px);
+    transform: scale(0.8) translateX(-300px) rotateY(20deg);
     z-index: 1;
     opacity: .4; }
 
