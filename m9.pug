@@ -1,0 +1,109 @@
+doctype
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title M9 Sportvan – Automoblox
+    link(href="css/bootstrap.min.css" rel="stylesheet")
+    link(href="css/main.css" rel="stylesheet")
+    link(href='favicon.png', rel='icon')
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  body
+    #cart
+      .cart__inner
+        h3 Cart
+        #cart_items
+          .cart_item(style="background-image: url(images/c9_large.jpg)")
+            .title C9 Sportscar
+            .price $9.99
+        
+        table.table
+          tr
+            td Subtotal
+            td $19.98
+          tr
+            td HST 13%
+            td $2.59
+          tr
+            th Total
+            th $22.57
+          
+
+        a#checkout.btn.btn-danger.btn-lg(href="#") Pay $22.57
+
+    #page
+      nav.navbar.navbar-expand-lg.navbar-light.bg-light: .container-fluid
+        a.navbar-brand(href="/"): img.logo(src="images/logo.png")
+        button.navbar-toggler(data-toggle="collapse" data-target="#navbar"): span.navbar-toggler-icon
+
+        .collapse.navbar-collapse#navbar
+          .mr-auto
+          ul.navbar-nav.mr-0
+            li.nav-item: a.nav-link(href="a9.html") A9 Compact
+            li.nav-item: a.nav-link(href="c9r.html") C9-R Sportscar
+            li.nav-item.active: a.nav-link(href="m9.html") M9 Sportvan
+            li.nav-item: a.nav-link(href="t9.html") T9 Pickup
+            li.nav-item: a.nav-link(href="x9.html") X9 SUV
+      .container: main
+        .gallery
+          img(src="images/m9_large.jpg" alt="")
+        article
+          h2 Automoblox® M9 Sportvan
+          .description The 2016 Automoblox® M9 comfortably seats eight of our new people. The extra-long main passenger compartment and additional seating for four in the rear block give this vehicle the longest wheelbase in the line-up. Large Brembo® brakes with cross-drilled rotors, will enable your child to build a minivan that even dads won’t be able to resist.
+          .buynow
+            form(action="shop.php" method="POST").row.justify-content-start
+              label.price.col-2 <small>$</small>9.99
+              label.in-stock.col-4.col-form-label
+                img(src="images/icons/instock.svg")
+                | In Stock
+              .col-6
+                input#addtocart.btn.btn-danger(type="submit" value="Add to Cart" data-title="M9 Sportvan" data-price="$9.99" data-photo="images/m9_large.jpg")
+              
+
+          .facts.row
+            .col
+              img(src="images/icons/age.svg" alt="Age")
+              p Ages 3 & Up
+            .col
+              img(src="images/icons/content.svg" alt="Contents")
+              p 13 Mix-and-Match Components
+            .col
+              img(src="images/icons/moneyback.svg" alt="Moneyback")
+              p 30 Day Moneyback
+            .col
+              img(src="images/icons/delivery.svg" alt="Free Delivery")
+              p Free Delivery
+          
+      
+      .similar.container-fluid
+        h3 Guests who bought this also bought
+
+        .row
+          .col-sm-6.col-md-3
+            a(href="a9.html").item
+              img(src="images/a9_large.jpg" alt="")
+              br
+              | A9 Compact
+          .col-sm-6.col-md-3
+            a(href="c9r.html").item
+              img(src="images/c9r_large.jpg" alt="")
+              br
+              | C9-R Sportscar
+          .col-sm-6.col-md-3
+            a(href="t9.html").item
+              img(src="images/t9_large.jpg" alt="")
+              br
+              | T9 Pickup
+          .col-sm-6.col-md-3
+            a(href="x9.html").item
+              img(src="images/x9_large.jpg" alt="")
+              br
+              | X9 SUV
+          
+
+
+      footer Designed by Ernest Iliiasov #200336022 for<br> COMP2081 Advanced Web Interface Design @ Georgian College
+
+    script(src="js/jquery.min.js")
+    script(src="js/popper.min.js")
+    script(src="js/bootstrap.min.js")
+    script(src="js/main.js")

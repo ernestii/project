@@ -5,7 +5,7 @@
     "main": "index.js",
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
-      "start": "pug index.pug -w --pretty & sass --watch ./css & lite-server"
+      "start": "pug *.pug -w --pretty & sass --watch ./css & lite-server"
     },
     "author": "",
     "license": "ISC"
